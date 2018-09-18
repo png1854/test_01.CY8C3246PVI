@@ -1,11 +1,11 @@
-C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 1   
+C51 COMPILER V9.51   MAIN                                                                  09/19/2018 02:40:04 PAGE 1   
 
 
 C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
 OBJECT MODULE PLACED IN .\DP8051\DP8051_Keil_951\Debug\main.obj
-COMPILER INVOKED BY: C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\import\keil\pk51\9.51\C51\BIN\c51.exe 
-                    -.\main.c NOIV LARGE MODDP2 OMF2 VB(1) PR(.\DP8051\DP8051_Keil_951\Debug\main.lst) CD DB NOIP OT(2,SIZE) DF(DEBUG) INCDIR
-                    -(.,.\Generated_Source\PSoC3) OJ(.\DP8051\DP8051_Keil_951\Debug\main.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\import\keil\pk51\9.51\C51\BIN\c51.exe 
+                    -main.c NOIV LARGE MODDP2 OMF2 VB(1) NOIP INCDIR(.,Generated_Source\PSoC3) FF(3) DB DF(DEBUG) WL(2) PR(.\DP8051\DP8051_Ke
+                    -il_951\Debug/main.lst) CD OT(2,SIZE) OJ(.\DP8051\DP8051_Keil_951\Debug\main.obj)
 
 line level    source
 
@@ -20,56 +20,57 @@ line level    source
    9           *
   10           * ========================================
   11          */
-  12          #include <project.h>
-  13          
-  14          int main()
-  15          {
-  16   1          uint32 dat=10;
-  17   1          uint8 k;
-  18   1          uint8 l;
-  19   1          for(;;)
-  20   1          {
-  21   2              for(l=0;l<8;l++)
-  22   2              {
-  23   3                  RCK_Write(0);
-  24   3                  for(k=0;k<32;k++)
-  25   3                  {
-  26   4                      SI_Write(dat&1);SCK_Write(1);SCK_Write(0);
-  27   4                      dat=dat>>1;
-  28   4                  }
-  29   3                  for(k=0;k<8;k++)
-  30   3                  {
-  31   4                      SI_Write(l&1);SCK_Write(1);SCK_Write(0);
-  32   4                      l=l>>1;
-  33   4                  }
-  34   3                  RCK_Write(1);
-  35   3              }
-  36   2          }
-  37   1      }
-  38          
+  12          
+  13          #include <project.h>
+  14          
+  15          int main()
+  16          {
+  17   1          uint32 dat=10;
+  18   1          uint8 k;
+  19   1          uint8 l;
+  20   1          for(;;)
+  21   1          {
+  22   2              for(l=0;l<8;l++)
+  23   2              {
+  24   3                  RCK_Write(0);
+  25   3                  for(k=0;k<32;k++)
+  26   3                  {
+  27   4                      SI_Write(dat&1);SCK_Write(1);SCK_Write(0);
+  28   4                      dat=dat>>1;
+  29   4                  }
+  30   3                  for(k=0;k<8;k++)
+  31   3                  {
+  32   4                      SI_Write(l&1);SCK_Write(1);SCK_Write(0);
+  33   4                      l=l>>1;
+  34   4                  }
+  35   3                  RCK_Write(1);
+  36   3              }
+  37   2          }
+  38   1      }
   39          
   40          
   41          
   42          
-C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 2   
+  43          
+C51 COMPILER V9.51   MAIN                                                                  09/19/2018 02:40:04 PAGE 2   
 
 ASSEMBLY LISTING OF GENERATED OBJECT CODE
 
 
              ; FUNCTION main (BEGIN)
-                                           ; SOURCE LINE # 14
                                            ; SOURCE LINE # 15
                                            ; SOURCE LINE # 16
+                                           ; SOURCE LINE # 17
 0000 7F0A              MOV     R7,#0AH
 0002 7E00              MOV     R6,#00H
 0004 7D00              MOV     R5,#00H
 0006 7C00              MOV     R4,#00H
 0008 900000      R     MOV     DPTR,#dat
 000B 120000      E     LCALL   ?C?LSTXDATA
-                                           ; SOURCE LINE # 19
-000E         ?C0001:
                                            ; SOURCE LINE # 20
+000E         ?C0001:
                                            ; SOURCE LINE # 21
+                                           ; SOURCE LINE # 22
 000E 900000      R     MOV     DPTR,#l
 0011 E4                CLR     A
 0012 F0                MOVX    @DPTR,A
@@ -81,11 +82,11 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 0019 C3                CLR     C
 001A 9408              SUBB    A,#08H
 001C 50F0              JNC     ?C0001
-                                           ; SOURCE LINE # 22
                                            ; SOURCE LINE # 23
+                                           ; SOURCE LINE # 24
 001E 7F00              MOV     R7,#00H
 0020 120000      E     LCALL   _RCK_Write
-                                           ; SOURCE LINE # 24
+                                           ; SOURCE LINE # 25
 0023 900000      R     MOV     DPTR,#k
 0026 E4                CLR     A
 0027 F0                MOVX    @DPTR,A
@@ -97,8 +98,8 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 002E C3                CLR     C
 002F 9420              SUBB    A,#020H
 0031 503C              JNC     ?C0007
-                                           ; SOURCE LINE # 25
                                            ; SOURCE LINE # 26
+                                           ; SOURCE LINE # 27
 0033 900000      R     MOV     DPTR,#dat
 0036 120000      E     LCALL   ?C?LLDXDATA
 0039 EF                MOV     A,R7
@@ -115,26 +116,26 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 0048 FC                MOV     R4,A
 0049 120000      E     LCALL   _SI_Write
 004C 7F01              MOV     R7,#01H
-C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 3   
+C51 COMPILER V9.51   MAIN                                                                  09/19/2018 02:40:04 PAGE 3   
 
 004E 120000      E     LCALL   _SCK_Write
 0051 7F00              MOV     R7,#00H
 0053 120000      E     LCALL   _SCK_Write
-                                           ; SOURCE LINE # 27
+                                           ; SOURCE LINE # 28
 0056 900000      R     MOV     DPTR,#dat
 0059 120000      E     LCALL   ?C?LLDXDATA
 005C 7801              MOV     R0,#01H
 005E 120000      E     LCALL   ?C?ULSHR
 0061 900000      R     MOV     DPTR,#dat
 0064 120000      E     LCALL   ?C?LSTXDATA
-                                           ; SOURCE LINE # 28
+                                           ; SOURCE LINE # 29
 0067 900000      R     MOV     DPTR,#k
 006A E0                MOVX    A,@DPTR
 006B 04                INC     A
 006C F0                MOVX    @DPTR,A
 006D 80B9              SJMP    ?C0006
 006F         ?C0007:
-                                           ; SOURCE LINE # 29
+                                           ; SOURCE LINE # 30
 006F 900000      R     MOV     DPTR,#k
 0072 E4                CLR     A
 0073 F0                MOVX    @DPTR,A
@@ -146,8 +147,8 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 007A C3                CLR     C
 007B 9408              SUBB    A,#08H
 007D 502C              JNC     ?C0010
-                                           ; SOURCE LINE # 30
                                            ; SOURCE LINE # 31
+                                           ; SOURCE LINE # 32
 007F 900000      R     MOV     DPTR,#l
 0082 E0                MOVX    A,@DPTR
 0083 FF                MOV     R7,A
@@ -159,7 +160,7 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 008D 120000      E     LCALL   _SCK_Write
 0090 7F00              MOV     R7,#00H
 0092 120000      E     LCALL   _SCK_Write
-                                           ; SOURCE LINE # 32
+                                           ; SOURCE LINE # 33
 0095 900000      R     MOV     DPTR,#l
 0098 E0                MOVX    A,@DPTR
 0099 FF                MOV     R7,A
@@ -170,19 +171,19 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 009E 900000      R     MOV     DPTR,#l
 00A1 EF                MOV     A,R7
 00A2 F0                MOVX    @DPTR,A
-                                           ; SOURCE LINE # 33
+                                           ; SOURCE LINE # 34
 00A3 900000      R     MOV     DPTR,#k
 00A6 E0                MOVX    A,@DPTR
 00A7 04                INC     A
 00A8 F0                MOVX    @DPTR,A
 00A9 80C9              SJMP    ?C0009
 00AB         ?C0010:
-                                           ; SOURCE LINE # 34
+                                           ; SOURCE LINE # 35
 00AB 7F01              MOV     R7,#01H
-C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 4   
+C51 COMPILER V9.51   MAIN                                                                  09/19/2018 02:40:04 PAGE 4   
 
 00AD 120000      E     LCALL   _RCK_Write
-                                           ; SOURCE LINE # 35
+                                           ; SOURCE LINE # 36
 00B0 900000      R     MOV     DPTR,#l
 00B3 E0                MOVX    A,@DPTR
 00B4 04                INC     A

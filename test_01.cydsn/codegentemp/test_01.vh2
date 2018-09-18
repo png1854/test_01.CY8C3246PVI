@@ -2,7 +2,7 @@
 --	Conversion of test_01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Sep 03 00:02:05 2014
+--	Wed Sep 19 02:39:56 2018
 --
 
 USE cypress.cypress.all;
@@ -72,6 +72,7 @@ SI:cy_psoc3_pins_v1_10
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -85,7 +86,11 @@ SI:cy_psoc3_pins_v1_10
 		pa_in_reset=>-1,
 		pa_out_clock=>-1,
 		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
+		pa_out_reset=>-1,
+		ovt_needed=>"",
+		ovt_slew_control=>"",
+		ovt_hyst_trim=>"",
+		input_buffer_sel=>"")
 	PORT MAP(oe=>(tmpOE__SI_net_0),
 		y=>(zero),
 		fb=>(tmpFB_0__SI_net_0),
@@ -137,6 +142,7 @@ SCK:cy_psoc3_pins_v1_10
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -150,7 +156,11 @@ SCK:cy_psoc3_pins_v1_10
 		pa_in_reset=>-1,
 		pa_out_clock=>-1,
 		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
+		pa_out_reset=>-1,
+		ovt_needed=>"",
+		ovt_slew_control=>"",
+		ovt_hyst_trim=>"",
+		input_buffer_sel=>"")
 	PORT MAP(oe=>(tmpOE__SI_net_0),
 		y=>(zero),
 		fb=>(tmpFB_0__SCK_net_0),
@@ -202,6 +212,7 @@ RCK:cy_psoc3_pins_v1_10
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -215,7 +226,11 @@ RCK:cy_psoc3_pins_v1_10
 		pa_in_reset=>-1,
 		pa_out_clock=>-1,
 		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
+		pa_out_reset=>-1,
+		ovt_needed=>"",
+		ovt_slew_control=>"",
+		ovt_hyst_trim=>"",
+		input_buffer_sel=>"")
 	PORT MAP(oe=>(tmpOE__SI_net_0),
 		y=>(zero),
 		fb=>(tmpFB_0__RCK_net_0),

@@ -13,10 +13,11 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="test_01\test_01\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="test_01\test_01\test_01.cydwr">
 <ExpandedNodeIds>
 <v>test_01</v>
 <v>test_01\test_01</v>
+<v>test_01\test_01\TopDesign</v>
 <v>test_01\test_01\test_01.cydwr</v>
 <v>test_01\test_01\Header Files</v>
 <v>test_01\test_01\Source Files</v>
@@ -119,6 +120,7 @@
 <v>test_01\test_01\DP8051\DP8051_Keil_951</v>
 <v>test_01\test_01\DP8051\DP8051_Keil_951\Debug</v>
 <v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
+<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
 <v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
 <v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -143,28 +145,6 @@
 <VisibleNodeIds>
 <v>test_01</v>
 <v>test_01\test_01</v>
-<v>test_01\test_01\DP8051</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CyFlash.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CyLib.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\cymem.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\KeilStart.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\main.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\RCK.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\SCK.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\Listing Files\SI.lst</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\test_01.elf</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\test_01.hex</v>
-<v>test_01\test_01\DP8051\DP8051_Keil_951\Debug\test_01.map</v>
-<v>test_01\test_01\test_01.gpdsc</v>
 <v>test_01\test_01\test_01.rpt</v>
 <v>test_01\test_01\test_01_timing.html</v>
 </VisibleNodeIds>

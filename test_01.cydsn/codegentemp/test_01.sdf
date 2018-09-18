@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2014-09-02T15:02:09Z")
+ (DATE "2018-09-18T17:40:01Z")
  (DESIGN "test_01")
  (VENDOR "Cypress Semiconductor")
- (PROGRAM "cydsfit")
- (VERSION "No Version Information Found")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL
@@ -12,9 +12,9 @@
   (INSTANCE *)
   (DELAY
    (ABSOLUTE
-    (INTERCONNECT RCK\(0\)_PAD RCK\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT SCK\(0\)_PAD SCK\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT SI\(0\)_PAD SI\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT SCK\(0\)_PAD SCK\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT RCK\(0\)_PAD RCK\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )
