@@ -1,0 +1,211 @@
+C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\DP8051\DP8051_Keil_951\Debug\main.obj
+COMPILER INVOKED BY: C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\import\keil\pk51\9.51\C51\BIN\c51.exe 
+                    -.\main.c NOIV LARGE MODDP2 OMF2 VB(1) PR(.\DP8051\DP8051_Keil_951\Debug\main.lst) CD DB NOIP OT(2,SIZE) DF(DEBUG) INCDIR
+                    -(.,.\Generated_Source\PSoC3) OJ(.\DP8051\DP8051_Keil_951\Debug\main.obj)
+
+line level    source
+
+   1          /* ========================================
+   2           *
+   3           * Copyright YOUR COMPANY, THE YEAR
+   4           * All Rights Reserved
+   5           * UNPUBLISHED, LICENSED SOFTWARE.
+   6           *
+   7           * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8           * WHICH IS THE PROPERTY OF your company.
+   9           *
+  10           * ========================================
+  11          */
+  12          #include <project.h>
+  13          
+  14          int main()
+  15          {
+  16   1          uint32 dat=10;
+  17   1          uint8 k;
+  18   1          uint8 l;
+  19   1          for(;;)
+  20   1          {
+  21   2              for(l=0;l<8;l++)
+  22   2              {
+  23   3                  RCK_Write(0);
+  24   3                  for(k=0;k<32;k++)
+  25   3                  {
+  26   4                      SI_Write(dat&1);SCK_Write(1);SCK_Write(0);
+  27   4                      dat=dat>>1;
+  28   4                  }
+  29   3                  for(k=0;k<8;k++)
+  30   3                  {
+  31   4                      SI_Write(l&1);SCK_Write(1);SCK_Write(0);
+  32   4                      l=l>>1;
+  33   4                  }
+  34   3                  RCK_Write(1);
+  35   3              }
+  36   2          }
+  37   1      }
+  38          
+  39          
+  40          
+  41          
+  42          
+C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 2   
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+
+             ; FUNCTION main (BEGIN)
+                                           ; SOURCE LINE # 14
+                                           ; SOURCE LINE # 15
+                                           ; SOURCE LINE # 16
+0000 7F0A              MOV     R7,#0AH
+0002 7E00              MOV     R6,#00H
+0004 7D00              MOV     R5,#00H
+0006 7C00              MOV     R4,#00H
+0008 900000      R     MOV     DPTR,#dat
+000B 120000      E     LCALL   ?C?LSTXDATA
+                                           ; SOURCE LINE # 19
+000E         ?C0001:
+                                           ; SOURCE LINE # 20
+                                           ; SOURCE LINE # 21
+000E 900000      R     MOV     DPTR,#l
+0011 E4                CLR     A
+0012 F0                MOVX    @DPTR,A
+0013         ?C0003:
+0013 900000      R     MOV     DPTR,#l
+0016 E0                MOVX    A,@DPTR
+0017 FF                MOV     R7,A
+0018 EF                MOV     A,R7
+0019 C3                CLR     C
+001A 9408              SUBB    A,#08H
+001C 50F0              JNC     ?C0001
+                                           ; SOURCE LINE # 22
+                                           ; SOURCE LINE # 23
+001E 7F00              MOV     R7,#00H
+0020 120000      E     LCALL   _RCK_Write
+                                           ; SOURCE LINE # 24
+0023 900000      R     MOV     DPTR,#k
+0026 E4                CLR     A
+0027 F0                MOVX    @DPTR,A
+0028         ?C0006:
+0028 900000      R     MOV     DPTR,#k
+002B E0                MOVX    A,@DPTR
+002C FF                MOV     R7,A
+002D EF                MOV     A,R7
+002E C3                CLR     C
+002F 9420              SUBB    A,#020H
+0031 503C              JNC     ?C0007
+                                           ; SOURCE LINE # 25
+                                           ; SOURCE LINE # 26
+0033 900000      R     MOV     DPTR,#dat
+0036 120000      E     LCALL   ?C?LLDXDATA
+0039 EF                MOV     A,R7
+003A 5401              ANL     A,#01H
+003C FF                MOV     R7,A
+003D EE                MOV     A,R6
+003E 5400              ANL     A,#00H
+0040 FE                MOV     R6,A
+0041 ED                MOV     A,R5
+0042 5400              ANL     A,#00H
+0044 FD                MOV     R5,A
+0045 EC                MOV     A,R4
+0046 5400              ANL     A,#00H
+0048 FC                MOV     R4,A
+0049 120000      E     LCALL   _SI_Write
+004C 7F01              MOV     R7,#01H
+C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 3   
+
+004E 120000      E     LCALL   _SCK_Write
+0051 7F00              MOV     R7,#00H
+0053 120000      E     LCALL   _SCK_Write
+                                           ; SOURCE LINE # 27
+0056 900000      R     MOV     DPTR,#dat
+0059 120000      E     LCALL   ?C?LLDXDATA
+005C 7801              MOV     R0,#01H
+005E 120000      E     LCALL   ?C?ULSHR
+0061 900000      R     MOV     DPTR,#dat
+0064 120000      E     LCALL   ?C?LSTXDATA
+                                           ; SOURCE LINE # 28
+0067 900000      R     MOV     DPTR,#k
+006A E0                MOVX    A,@DPTR
+006B 04                INC     A
+006C F0                MOVX    @DPTR,A
+006D 80B9              SJMP    ?C0006
+006F         ?C0007:
+                                           ; SOURCE LINE # 29
+006F 900000      R     MOV     DPTR,#k
+0072 E4                CLR     A
+0073 F0                MOVX    @DPTR,A
+0074         ?C0009:
+0074 900000      R     MOV     DPTR,#k
+0077 E0                MOVX    A,@DPTR
+0078 FF                MOV     R7,A
+0079 EF                MOV     A,R7
+007A C3                CLR     C
+007B 9408              SUBB    A,#08H
+007D 502C              JNC     ?C0010
+                                           ; SOURCE LINE # 30
+                                           ; SOURCE LINE # 31
+007F 900000      R     MOV     DPTR,#l
+0082 E0                MOVX    A,@DPTR
+0083 FF                MOV     R7,A
+0084 EF                MOV     A,R7
+0085 5401              ANL     A,#01H
+0087 FF                MOV     R7,A
+0088 120000      E     LCALL   _SI_Write
+008B 7F01              MOV     R7,#01H
+008D 120000      E     LCALL   _SCK_Write
+0090 7F00              MOV     R7,#00H
+0092 120000      E     LCALL   _SCK_Write
+                                           ; SOURCE LINE # 32
+0095 900000      R     MOV     DPTR,#l
+0098 E0                MOVX    A,@DPTR
+0099 FF                MOV     R7,A
+009A EF                MOV     A,R7
+009B C3                CLR     C
+009C 13                RRC     A
+009D FF                MOV     R7,A
+009E 900000      R     MOV     DPTR,#l
+00A1 EF                MOV     A,R7
+00A2 F0                MOVX    @DPTR,A
+                                           ; SOURCE LINE # 33
+00A3 900000      R     MOV     DPTR,#k
+00A6 E0                MOVX    A,@DPTR
+00A7 04                INC     A
+00A8 F0                MOVX    @DPTR,A
+00A9 80C9              SJMP    ?C0009
+00AB         ?C0010:
+                                           ; SOURCE LINE # 34
+00AB 7F01              MOV     R7,#01H
+C51 COMPILER V9.51   MAIN                                                                  09/03/2014 00:11:42 PAGE 4   
+
+00AD 120000      E     LCALL   _RCK_Write
+                                           ; SOURCE LINE # 35
+00B0 900000      R     MOV     DPTR,#l
+00B3 E0                MOVX    A,@DPTR
+00B4 04                INC     A
+00B5 F0                MOVX    @DPTR,A
+00B6 020000      R     LJMP    ?C0003
+00B9 22                RET     
+             ; FUNCTION main (END)
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    186    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----       6
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
